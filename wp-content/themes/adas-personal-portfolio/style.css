@@ -1,0 +1,2421 @@
+/*!
+Theme Name: Adas Personal Portfolio
+Theme URI: https://pencilwp.com/product/adas-personal-portfolio/
+Author: PencilWp
+Author URI: https://pencilwp.com
+Description: Adas Personal Portfolio is the ultimate Elementor WordPress theme. Made for professionals looking to leave a lasting impression online. Whether you're a freelancer, designer, developer, photographer, front-end web designer, back-end developer, creative copywriter, job seeker, lawyer, business owner, consultant, entrepreneur, artist, writer, educator, coach, public speaker, marketing professional, doctor, architect, or real estate agent, Adas helps you showcase your work, skills, and achievements with style and ease. Developed with Elementor, this theme empowers you to create a stunning, fully customized portfolio without any coding knowledge. With its sleek, modern design and intuitive layout, Adas lets your work shine front and center. Tailored for the ambitious individual, Adas is packed with features that enhance your personal brand, SEO optimization for greater visibility, responsive design to look perfect on any device, and fast-loading performance for a smooth user experience. From a standout resume section to dynamic portfolio displays, your online presence will be as professional as you are. Adas is the perfect solution for anyone who wants their personal portfolio to stand out in a crowded digital world.
+Version: 1.7
+Tested up to: 6.8
+Requires PHP: 7.4
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GNU General Public License v2 or later
+Text Domain: adas-personal-portfolio
+
+Tags: blog, portfolio, news, grid-layout, photography, one-column, two-columns, three-columns, four-columns, custom-background, custom-logo, custom-menu, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Adas is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Theme Default CSS
+# Header CSS
+# Blog CSS
+# Pages CSS
+# Pagination CSS
+# WordPress Default CSS
+# Footer CSS
+--------------------------------------------------------------*/
+
+/*---------------------------------------
+# Theme Default CSS
+-----------------------------------------*/
+.navigation.posts-navigation, .navigation.post-navigation {
+	margin: 60px 0 0;
+}
+.nav-previous {
+	margin-right: 5px;
+}
+.nav-links a {
+	background-color: var(--adas-personal-portfolio-white);
+	padding: 10px 20px;
+	display: inline-block;
+	position: relative;
+	border: 1px solid var(--adas-personal-portfolio-border);
+}
+.nav-links a:hover {
+	background: var(--adas-personal-portfolio-primary);
+	color: #fff;
+	border-color: transparent;
+}
+.nav-links .nav-next a::before {
+	left: 100%;
+	border-right-color: transparent;
+	border-left-
+}
+.nav-links .nav-previous a:hover:before{
+	border-right-color:var(--adas-personal-portfolio-primary);
+}
+.nav-links .nav-next a:hover:before{
+	border-left-color:var(--adas-personal-portfolio-primary);
+}
+/* GrShop BC */
+.adas-personal-portfolio-bc {
+	padding: 40px 0;
+	text-align: center;
+	content: "";
+	height: 100%;
+	width: 100%;
+	background: var(--adas-personal-portfolio-darkbg2);
+	padding-bottom: 0;
+}
+.adas-personal-portfolio-bc .bc-title {
+	font-size: 35px;
+	margin-bottom: 8px;
+}
+.adas-personal-portfolio-bc .bc-list {
+	display: inline-flex;
+	background: var(--adas-personal-portfolio-primary) !important;
+	padding: 5px 20px;
+	border-radius: 3px;
+	border-bottom: 2px solid #00000024;
+	gap: 5px;
+	color: #fff;
+	margin-top: 15px;
+}
+.adas-personal-portfolio-bc .bc-list span {
+	color: #fff;
+  font-size: 14px;
+}
+.image-head img {
+	border-radius: 5px;
+}
+/* Theme Search CSS */
+.searchform {
+	position: relative;
+}
+.searchform input[type="text"] {
+	display: ;
+	width: 100%;
+	height: 52px;
+	padding: 0 15px;
+	border: 1px solid #ebebeb;
+	border-radius: 0px;
+	font-size: 14px;
+}
+.searchform input[type="submit"] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 52px;
+	width: 52px;
+	background: transparent;
+	border: none;
+	z-index: 1000;
+	cursor: pointer;
+	text-indent: -200px;
+	overflow: hidden;
+	border-radius: 0;
+}
+.searchform div:after {
+	content: "";
+	height: 48px;
+	width: 48px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: "\f002";
+	font-size: 1.2em;
+	font-family: 'FontAwesome';
+	line-height: 48px;
+	text-align: center;
+	border-left: none;
+	z-index: 110;
+	color:var(--adas-personal-portfolio-primary);
+}
+.searchform input[type="text"]:hover,
+.searchform input[type="text"]:focus {
+	border-color:var(--adas-personal-portfolio-primary);
+}
+.adas-personal-portfolio-search-close {
+	min-width: 34px;
+	min-height: 34px;
+	line-height: 34px;
+	text-align: center;
+	font-size: 19px;
+	color: #fff !important;
+	border-radius: 100%;
+	background: transparent;
+}
+.adas-personal-portfolio-search-close:hover,
+.adas-personal-portfolio-search-close:focus {
+	background: var(--adas-personal-portfolio-heading);
+	color: var(--adas-personal-portfolio-primary) !important;
+	border-color: transparent !important;
+}
+/* Search Block */
+
+.wp-block-search .wp-block-search__input {
+	border: 1px solid #ccc;
+}
+.wp-block-search .wp-block-search__button:hover, .wp-block-search .wp-block-search__button:focus {
+	background: var(--adas-personal-portfolio-heading);
+}
+/* Post Meta */
+.adas-personal-portfolio-post-meta {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: inline-block;
+	margin-bottom: 15px;
+}
+.adas-personal-portfolio-post-meta li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.adas-personal-portfolio-post-meta li i {
+	color: var(--adas-personal-portfolio-primary);
+	margin-right: 5px;
+	font-size: 13px;
+}
+.adas-personal-portfolio-post-meta li a {
+	font-weight: normal;
+	text-decoration: none;
+}
+.adas-personal-portfolio-post-meta li a:hover{
+	color:var(--adas-personal-portfolio-primary);
+}
+
+/* Sisdebar Menu*/
+.pw-sidebar-menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+.pw-sidebar-menu ul li a {
+	flex-direction: column;
+	padding: 3px 8px;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	gap: 5px;
+	color: var(--adas-personal-portfolio-heading);
+	min-width: 75px;
+	max-width: 75px;
+	font-size: 14px;
+	position: relative;
+	text-decoration: none !important;
+	transition: all 0.3s ease;
+}
+.pw-sidebar-menu ul li a::before {
+	content: '';
+	position: absolute;
+	right: -35px;
+	top: 22px;
+	width: 100%;
+	height: 1px;
+	background: -moz-radial-gradient(left,ellipse cover,#ddd 0%,rgba(255,255,255,0) 70%);
+	background: -webkit-radial-gradient(left,ellipse cover,#ddd 0%,rgba(255,255,255,0) 70%);
+	background: radial-gradient(ellipse at left,#ddd 0%,rgba(255,255,255,0) 70%);
+}
+.pw-sidebar-menu ul li a i {
+	border-radius: 100%;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease;
+	margin: 0 !important;
+	background: var(--adas-personal-portfolio-offbg);
+	padding: 0 !important;
+	z-index: 33;
+	width: 38px !important;
+	height: 38px !important;
+	font-size: 15px !important;
+}
+
+.pw-sidebar-menu ul.nav li.current-menu-item a i, .pw-sidebar-menu ul.nav li:hover a i {
+	background: var(--adas-personal-portfolio-primary) !important;
+	color: #fff !important;
+	border-bottom-color: #ffffff45;
+	position: relative;
+	/* left: -25px; */
+	transition: all 0.3s ease;
+}
+.pw-sidebar-menu ul li.current-menu-item a,
+.pw-sidebar-menu ul li:hover a{
+  color:var(--adas-personal-portfolio-primary);
+}
+
+.pw-sidebar-menu ul li.current-menu-item a:before, .pw-sidebar-menu ul li:hover a:before {
+	background: -moz-radial-gradient(left,ellipse cover,var(--adas-personal-portfolio-primary) 0%,rgba(255,255,255,0) 70%);
+	background: -webkit-radial-gradient(left,ellipse cover,var(--adas-personal-portfolio-primary) 0%,rgba(255,255,255,0) 70%);
+	background: radial-gradient(ellipse at left,var(--adas-personal-portfolio-primary) 0%,rgba(255,255,255,0) 70%);
+}
+/*---------------------------------------
+# End Theme Default CSS
+-----------------------------------------*/
+
+/*---------------------------------------
+# Header CSS
+-----------------------------------------*/
+.adas-personal-portfolio-logo img {
+	max-width: 170px;
+}
+/* Main Menu */
+.adas-personal-portfolio-header__nav ul li {
+	position: relative;
+	display: inline-block;
+}
+.adas-personal-portfolio-header__nav ul li:last-child{
+	margin:0;
+	border:none;
+}
+.adas-personal-portfolio-header__nav ul li a {
+	text-transform: capitalize;
+	display: block;
+	/* border-radius: 0px; */
+	padding: 10px 5px;
+	position: relative;
+	text-decoration: none;
+	border-bottom: 2px solid #00000024;
+	font-size: 16px;
+	color: var(--adas-personal-portfolio-heading);
+	text-decoration: none !important;
+}
+.adas-personal-portfolio-header__nav ul li a i {
+	font-size: 15px !important;
+}
+.adas-personal-portfolio-header__nav ul li ul.sub-menu li a:hover, 
+.adas-personal-portfolio-header__nav ul li ul.sub-menu li a:focus {
+	background: var(--adas-personal-portfolio-primary) !important;
+	color: #fff !important;
+}
+nav.adas-personal-portfolio-header__nav ul li > a:hover, nav.adas-personal-portfolio-header__nav ul li > a:focus, nav.adas-personal-portfolio-header__nav ul li.current-menu-item > a {
+	color: var(--adas-personal-portfolio-primary) !important;
+	border-bottom-color: var(--adas-personal-portfolio-primary) !important;
+}
+.adas-personal-portfolio-header__nav ul li.current-menu-item a:before{
+	border-bottom: 1px solid var(--adas-personal-portfolio-primary) !important;
+}
+
+/* Dropdown Menu */
+.adas-personal-portfolio-header__nav {
+	margin: 0;
+	padding: 0;
+}
+.adas-personal-portfolio-header__nav ul {
+	display: initial;
+	margin: 0;
+	display: flex;
+	gap: 25px;
+}
+.adas-personal-portfolio-header__nav ul li ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	position: absolute;
+	top: 106%;
+	z-index: 99999;
+	background-color: var(--adas-personal-portfolio-white);
+	margin: 0;
+	opacity: 0;
+	visibility: hidden;
+	width: 200px;
+	margin: 0;
+	padding: 0;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	gap: 0;
+	border-radius: 4px;
+	transition: all 0.3s ease;
+}
+.adas-personal-portfolio-header__nav ul li:hover ul,
+.adas-personal-portfolio-header__nav ul li.active-focus ul{
+	opacity:1;
+	visibility:visible;
+}
+.adas-personal-portfolio-header__nav ul li ul li {
+	display: block;
+	margin: 0;
+	width: 100%;
+}
+.adas-personal-portfolio-header__nav ul li ul li a {
+	color: #555 !important;
+	padding: 0;
+	padding: 12px 20px;
+	font-size: 14px;
+	font-weight: 400;
+	background: transparent !important;
+	border: none;
+	background: none !important;
+}
+.adas-personal-portfolio-header__nav ul li ul li a::before{
+	display:none;
+}
+.adas-personal-portfolio-header__nav ul li ul li a:hover{
+	color:var(--adas-personal-portfolio-primary);
+}
+.adas-personal-portfolio-header__nav li ul li ul.sub-menu {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+.adas-personal-portfolio-header__nav li ul li:hover ul,
+.adas-personal-portfolio-header__nav li ul li.active-focus ul{
+	opacity: 1;
+	visibility: visible;
+}
+.adas-personal-portfolio-header__nav li ul.sub-menu li ul li ul{
+	opacity: 0;
+	visibility: hidden;
+}
+.adas-personal-portfolio-header__nav li ul.sub-menu li ul li:hover ul,
+.adas-personal-portfolio-header__nav li ul.sub-menu li ul li.active-focus ul{
+	opacity: 1;
+	visibility: visible;
+}
+.adas-personal-portfolio-header__nav ul li ul li ul {
+	left: 100%;
+	top:0;
+	opacity:0 !important;
+	visibility:hidden !important;
+}
+.adas-personal-portfolio-header__nav ul li ul li:hover ul,
+.adas-personal-portfolio-header__nav ul li ul li.active-focus ul{
+  	opacity:1 !important;
+	visibility:visible !important;
+}
+/* Right Default */
+.adas-personal-portfolio-header__right {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+.adas-personal-portfolio-header__button--icon {
+	text-align: center;
+	line-height: 40px;
+	padding: 0;
+	border-radius: 4px;
+	font-size: 18px;
+	align-items: center;
+	gap: 5px;
+	height: 42px;
+	background: var(--adas-personal-portfolio-offbg) !important;
+	color: var(--adas-personal-portfolio-heading) !important;
+	display: flex;
+	justify-content: center;
+	border: 1px solid var(--adas-personal-portfolio-border) !important;
+	padding: 0 15px;
+}
+a.adas-personal-portfolio-header__button--icon:hover, a.adas-personal-portfolio-header__button--icon:focus {
+	background: var(--adas-personal-portfolio-primary) !important;
+	color: #fff !important;
+	border-color:none !important;
+}
+.adas-personal-portfolio-header__button--icon i{
+	color:currentColor !important;
+}
+.adas-personal-portfolio-header__button--icon i::before{
+	transition: all 0.3s ease;
+}
+.dark-theme .adas-personal-portfolio-light-dark-mode-toggle i::before {
+	content: "\f185";
+}
+.adas-personal-portfolio-header__button a.adas-personal-portfolio-btn {
+	padding: 8px 15px;
+	border-radius: 30px;
+	
+	display: inline-block;
+	background-color: var(--adas-personal-portfolio-white);
+}
+.adas-personal-portfolio-header__button a.adas-personal-portfolio-btn:hover,
+.adas-personal-portfolio-header__button a.adas-personal-portfolio-btn:focus{
+	background:var(--adas-personal-portfolio-primary) !important;
+	color:#fff !important;
+}
+.adas-personal-portfolio-header__button {
+	position: relative;
+	display: flex;
+	gap: 10px;
+	cursor: pointer;
+}
+.adas-personal-portfolio-social {
+	list-style: none;
+	margin: 0;
+	display: inline-block;
+	position: absolute;
+	top: 36px;
+	background-color: var(--adas-personal-portfolio-white);
+	text-align: center;
+	border-radius: 3px;
+	width: 50px;
+	padding: 12px;
+	opacity: 0;
+	right:0;
+	visibility: hidden;
+	transition:all 0.3s ease;
+	box-shadow:0 3px 3px rgba(0, 0, 0, 0.2);
+}
+.adas-personal-portfolio-header__button:hover .adas-personal-portfolio-social,
+.adas-personal-portfolio-header__button.active-focus .adas-personal-portfolio-social {
+	opacity: 1;
+	visibility: visible;
+}
+.adas-personal-portfolio-social li {
+  padding-right: ;
+  color: #fff;
+  display: block;
+}
+.adas-personal-portfolio-social li a {
+	text-align: center;
+	border-radius: 100%;
+	
+	font-size: 13px;
+	display: inline-block;
+	padding: 0;
+	line-height: 100%;
+	border: none !important;
+	outline: none !important;
+}
+.adas-personal-portfolio-social li:hover a,
+.adas-personal-portfolio-social li a:focus{
+	color: var(--adas-personal-portfolio-primary);
+	background: transparent;
+}
+.search-form-main {
+	width: 100%;
+	z-index: 100;
+	padding: 25px 30%;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(100px );
+	transition: all 0.3s ease;
+	position: fixed;
+	background: var(--adas-personal-portfolio-heading);
+	box-shadow: 0 0px 5px rgba(0, 0, 0, 0.14);
+	display: block;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	bottom: 0;
+	left: 0;
+}
+.search-form-main.active{
+	opacity: 1;
+	visibility:visible;
+	transform: translateY(0px );
+}
+.search-form-main .search-form {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	max-width: 700px;
+	margin: 0 auto;
+	gap: 15px;
+}
+.search-form-main .search-form input[type="search"] {
+	border: 1px solid #0A25401F;
+	border-radius: 0px;
+	background: transparent !important;
+	border-bottom: 1px solid #fff;
+	color: #fff !important;
+}
+.search-form-main .search-form input[type="search"],
+.search-form-main .search-form input[type="submit"]{
+	margin:0 !important;
+}
+.search-form-main .search-form input[type="search"]:hover, .search-form-main .search-form input[type="search"]:focus {
+	background-color: var(--adas-personal-portfolio-white);
+}
+.search-form-main .search-form input[type="submit"]:hover,
+.search-form-main .search-form input[type="submit"]:focus {
+	background: #fff !important;
+	color: var(--adas-personal-portfolio-primary);
+}
+.img-logo img,.offcanvas-logo img {
+  border-radius: 4px;
+  max-height: 50px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+	.adas-personal-portfolio-header-account__contact{
+		display: none;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.adas-personal-portfolio-search-form form{
+		min-width: 200px;
+	}
+}
+@media only screen and (max-width: 767px) {
+.adas-personal-portfolio-header__welcome, .adas-personal-portfolio-header__list {
+	text-align: center;
+	justify-content: center;
+}
+.adas-personal-portfolio-logo {
+	display: flex;
+	justify-content: space-between;
+}
+.adas-personal-portfolio-header__middle {
+  gap: 15px;
+}
+.adas-personal-portfolio-search-form,.adas-personal-portfolio-header__nav{
+	display: none;
+}
+.adas-personal-portfolio-header-account__contact{
+	display: none;
+}
+.adas-personal-portfolio-header-account{
+	gap:5px;
+}
+.adas-personal-portfolio-header-account .adas-personal-portfolio-header-account__icon {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 13px;
+}
+.adas-personal-portfolio-header-account__label {
+	font-size: 15px;
+}
+}
+
+.adas-small-header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.adas-small-header {
+	display: none;
+	padding: 20px 0;
+}
+
+@media only screen and (max-width: 1024px) {
+	.adas-personal-portfolio-header{
+		display: none;
+	}
+	.adas-small-header{
+		display: block;
+	}
+	
+	}
+
+	#offcanvas-modal {
+		z-index: 900000000;
+	}
+	.offcanvas-logo {
+		margin-bottom: 20px;
+	}
+	.offcanvas-logo img {
+	max-width: 170px;
+	}
+	.offcanvas-form .btn {
+	  position: absolute;
+	  top: 5px;
+	  right: 5px;
+	}
+	.offcanvas-toggler {
+		text-align: center;
+		display: inline-block;
+		padding: 0px !important;
+		width: 40px;
+		height: 40px;
+		z-index: 3;
+		border-radius: 4px;
+		border: none;
+		position: absolute;
+		right: 0;
+		background: var(--heading_color);
+		align-items: center;
+		box-shadow: 0px 0px 15px #00000014;
+		display: flex !important;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.offcanvas-toggler:hover {
+	  background: var(--primary_color) !important;
+	}
+	.offcanvas-toggler__white{
+	  background-color: #fff;
+	}
+	.offcanvas-toggler:hover .line:nth-child(1) {
+	  -webkit-transform: rotate(45deg);
+	  -ms-transform: rotate(45deg);
+	  transform: rotate(45deg);
+	  top: 7px;
+	}
+	.offcanvas-toggler:hover .line:nth-child(2) {
+	  opacity: 0;
+	  visibility: hidden;
+	}
+	.offcanvas-toggler:hover .line:nth-child(3) {
+	  -webkit-transform: rotate(-46deg);
+	  -ms-transform: rotate(-46deg);
+	  transform: rotate(-46deg);
+	  bottom: 5px;
+	}
+	.offcanvas-toggler .line {
+	  position: relative;
+	  display: block;
+	  width: 20px;
+	  height: 2px;
+	  background-color: var(--adas-personal-portfolio-white);
+	  margin-left: auto;
+	  margin-right: auto;
+	  -webkit-transition: all 0.3s;
+	  -o-transition: all 0.3s;
+	  transition: all 0.3s;
+	}
+	.offcanvas-toggler .line + .line {
+	  margin-top: 4px;
+	}
+	.offcanvas-modal.modal.fade .modal-dialog {
+	  -webkit-transform: translateX(-100%);
+	  -ms-transform: translateX(-100%);
+	  transform: translateX(-100%);
+	}
+	.offcanvas-modal.modal.show .modal-dialog {
+	  -webkit-transform: translateX(0%);
+	  -ms-transform: translateX(0%);
+	  transform: translateX(0%);
+	}
+	.offcanvas-dialog {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 300px;
+	  height: 100%;
+	  margin: 0;
+	}
+	.offcanvas-dialog .modal-content {
+	  height: 100%;
+	  border-radius: 0;
+	  border: 0;
+	}
+	.offcanvas-header {
+		border: none;
+		padding: 0;
+		display: flex;
+		justify-content: end;
+	}
+	.offcanvas-header .btn-close {
+		color: var(--adas-personal-portfolio-heading);
+		opacity: 1;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		padding: 0;
+		background: transparent;
+		box-shadow: none !important;
+		height: 34px;
+		border: 1px solid var(--adas-personal-portfolio-border);
+		margin: 0 !important;
+		width: max-content;
+		padding: 0 20px;
+	}
+	.offcanvas-header .btn-close:hover,	.offcanvas-header .btn-close:focus {
+		background: var(--adas-personal-portfolio-primary);
+		color: #fff;
+		border-color: transparent;
+	}
+	.offcanvas-menu {
+	  position: relative;
+	  z-index: 1;
+	  overflow-y: scroll;
+	}
+	.offcanvas-menu::before {
+	  position: absolute;
+	  z-index: -1;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  content: "";
+	  background-color: #fff;
+	}
+	
+	#offcanvas-menu ul {
+		transition: initial !important;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.offcanvas-menu > ul > li > ul li {
+	  border-bottom: 0px;
+	  padding: 0;
+	}
+	.offcanvas-menu > ul > li > ul li a {
+		padding-left: 15px;
+		font-weight: 400;
+		font-size: 15px;
+		color: #555 !important;
+	}
+	.offcanvas-menu > ul > li > ul li a:hover{
+	  color: var(--blue_color) !important
+	}
+	.offcanvas-menu ul li i {
+    	min-width: 20px;
+    }
+	.offcanvas-menu li.active > ul {
+	  display: block;
+	}
+	.offcanvas-menu .sub-menu {
+		padding: 0;
+		margin-top: 12px;
+	}
+	.offcanvas-menu li {
+		margin-bottom: 12px;
+		position: relative;
+		border-bottom: 1px solid var(--adas-personal-portfolio-border);
+		padding-bottom: 12px;
+	}
+	.offcanvas-menu li.active a{
+	  color: #393e46;
+	}
+	.offcanvas-menu li:last-child {
+	  margin: 0;
+	  border:none;
+	  padding:0;
+	}
+	.offcanvas-menu li a {
+		font-weight: 400;
+		display: block;
+		text-transform: capitalize;
+		padding: 0px;
+		position: relative;
+		font-size: 16px;
+		color: var(--adas-personal-portfolio-text);
+		text-decoration: none;
+	}
+    nav.offcanvas-menu li a:hover,    nav.offcanvas-menu li a:focus {
+    	color: var(--adas-personal-portfolio-primary) !important;
+    	text-decoration:underline;
+    }
+	.offcanvas-menu li a i {
+		font-size: 14px !important;
+	}
+	.offcanvas-menu .sub-menu {
+	  padding: 0;
+	}
+	.offcanvas-menu li.menu-item-has-children a::after {
+	position: absolute;
+	margin-left: 0 !important;
+	font-size: 15px;
+	font-family: "Font Awesome 6 Free";
+	font-weight: 600;
+	content: "\f105";
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	top: 1px;
+	right: 10px;
+	}
+	.offcanvas-menu li a::after {
+	position: absolute;
+	right: 0;
+	color: #7E8BA0;
+	}
+	.offcanvas-menu li.menu-item-has-children .sub-menu li a::after {
+	  display: none;
+	}
+	.offcanvas-menu li.menu-item-has-children.active a::after {
+	  -webkit-transform: rotate(90deg);
+	  -ms-transform: rotate(90deg);
+	  transform: rotate(90deg);
+	}
+	.follow-title {
+	  margin-bottom: 20px;
+	  font-size: 25px;
+	}
+	.offcanvas-modal .modal-content {
+		padding: 30px 25px;
+		gap: 20px;
+	}
+	.offcanvas-modal .offcanvas-form {
+	  margin: 20px 0px 30px;
+	}
+	.offcanvas-toggler {
+		display: none !important;
+	}
+	.offcanvas-menu li a i {
+		margin: 0;
+	}
+	#offcanvas-menu ul ul {
+		padding-left: 20px;
+		margin-top: 15px;
+	}
+	@media only screen and (max-width: 991px) {
+	  .offcanvas-toggler {
+		display: inline-flex !important;
+	}
+	}
+
+	.adas-personal-portfolio-header__middle {
+		display: flex;
+		gap: 30px;
+		justify-content: space-between;
+	  }
+	  .adas-personal-portfolio-header__inside {
+		padding: 15px 0;
+		box-shadow: 0px 0px 5px #00000026;
+	  }	
+/*---------------------------------------
+# End Header CSS
+-----------------------------------------*/
+
+/*---------------------------------------
+# Blog CSS
+-----------------------------------------*/
+.adas-personal-portfolio-latest-post {
+	margin-top: 30px;
+}
+.adas-personal-portfolio-latest-post {
+	position: relative;
+}
+.adas-personal-portfolio-latest-post article {
+	border-bottom: 1px solid #cccccc8f;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+.adas-personal-portfolio-latest-post article:last-child{
+	padding:0;
+	margin:0;
+	border:none;
+}
+
+/* Latest Post CSS*/
+.adas-personal-portfolio-single-post {
+	display: flex !important;
+	justify-content: center;
+	align-content: center;
+	margin-top: 30px;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 8px;
+}
+.adas-personal-portfolio-single-post__head {
+	position: relative;
+}
+.adas-personal-portfolio-single-post__head img {
+	transition: all 0.3s ease;
+	border-radius: 4px 4px 0 0;
+}
+.adas-personal-portfolio-single-post__cat a {
+	padding: 2px 12px;
+	background: transparent;
+	
+	font-size: 13px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	display: inline-block;
+	/* position: absolute; */
+	bottom: 10px;
+	left: 10px;
+	z-index: 222;
+	border-radius: 30px;
+	border: 1px solid var(--adas-personal-portfolio-border);
+	background-color: var(--adas-personal-portfolio-white);
+}
+.adas-personal-portfolio-single-post__cat a:hover,
+.adas-personal-portfolio-single-post__cat a:focus{
+	color:var(--adas-personal-portfolio-primary) !important;
+	text-decoration: underline;
+}
+.adas-personal-portfolio-single-post__cat {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin-bottom: 5px;
+}
+.adas-personal-portfolio-single-post__cat a {
+	color: var(--adas-personal-portfolio-text);
+}
+.adas-personal-portfolio-single-post__head .adas-personal-portfolio-single-post__cat {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 100;
+}
+.adas-personal-portfolio-single-post__head .adas-personal-portfolio-single-post__cat a{
+	border-color:transparent;
+}
+.adas-personal-portfolio-single-post__title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+.adas-personal-portfolio-single-post__button .adas-personal-portfolio-btn:hover,
+.adas-personal-portfolio-single-post__button .adas-personal-portfolio-btn:focus{
+	background-color:var(--adas-personal-portfolio-primary) !important;
+	color:#fff !important;
+}
+.adas-personal-portfolio-sticky {
+	color: var(--adas-personal-portfolio-primary);
+	font-size: 24px;
+	display: inline-block;
+	border-radius: 100%;
+	text-align: center;
+	border-color: transparent;
+}
+.adas-personal-portfolio-single-post__title a {
+	display: inline-block;
+	margin-right: 5px;
+	font-size: 22px;
+	
+	font-weight: 500;
+	text-decoration: none;
+}
+.adas-personal-portfolio-single-post__content p {
+	
+}
+.adas-personal-portfolio-single-post__title a:hover{
+	color:var(--adas-personal-portfolio-primary);
+}
+.adas-personal-portfolio-single-post__body {
+	position: relative;
+	padding: 30px 15px;
+}
+.adas-personal-portfolio-single-post__body .entry-content {
+	margin: 15px 0 0;
+}
+
+.adas-personal-portfolio-single-post__content{
+	margin:5px 0;
+}
+
+.adas-personal-portfolio-single-post__button {
+	margin-top: 15px;
+}
+
+/* Home Layout */
+.adas-personal-portfolio-home-layout {
+	/* background-color: var(--adas-personal-portfolio-white); */
+	/* margin-top: 30px; */
+	z-index: 100;
+	position: relative;
+}
+.adas-personal-portfolio-heading-group {
+	border-bottom: 1px solid #bbbbbb47;
+	padding-bottom: 20px;
+}
+.adas-personal-portfolio-heading-group__title {
+	font-size: 24px;
+}
+.adas-personal-portfolio-heading-group__text {
+	font-size: 15px;
+}
+
+.post-formet {
+	position: absolute;
+	top: -21px;
+	background: var(--adas-personal-portfolio-primary);
+	width: 42px;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	color: #fff;
+	border: 1px solid #ccc6;
+	opacity: 1;
+	visibility: visible;
+	right: 0;
+	font-size: 13px;
+	left: 0;
+	z-index: 3333;
+	border-radius: 0 5px 5px 0;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+.adas-personal-portfolio-single-post:hover .post-formet{
+	opacity:1;
+	visibility:visible;
+	transform: translateY(0px);
+}
+.sticky .adas-personal-portfolio-single-post .blog-head::after {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	content: "\f24a ";
+	font-family: "FontAwesome";
+	background: var(--adas-personal-portfolio-primary);
+	padding: 8px 15px;
+	color: #fff;
+	border-radius: 30px;
+	text-transform: capitalize;
+	z-index:300;
+}
+/* Blog Sidebar */
+.adas-personal-portfolio-sidebar .widget-area {
+	position:relative;
+}
+.adas-personal-portfolio-sidebar .widget:last-child{
+	margin:0;
+}
+.adas-personal-portfolio-sidebar .search-top input {
+  width: 100%;
+  height: 45px;
+  border-radius: 0px;
+  padding: 0 15px;
+  font-weight: 400;
+  border: none;
+}
+.adas-personal-portfolio-sidebar .search-top #searchsubmit {
+	position: absolute;
+	height: 45px;
+	border-radius: 0px;
+	top: 10px;
+	border: none;
+	background: #f5f5f5;
+	
+	right: 10px;
+}
+.adas-personal-portfolio-sidebar .search-top {
+  position: relative;
+  padding: 10px;
+  background: var(--adas-personal-portfolio-primary);
+}
+.adas-personal-portfolio-sidebar .widget {
+	margin-bottom: 40px;
+}
+.adas-personal-portfolio-sidebar .widget:last-child{
+	margin:0;
+}
+
+.wp-block-social-links {
+  margin-top: 15px !important;
+}
+.wp-block-social-links li {
+  margin: 0 !important;
+}
+.wp-block-social-links li a{
+	fill:#fff !important;
+}
+.wp-block-latest-comments__comment-link{
+	color: var(--adas-personal-portfolio-heading);
+}
+a.wp-block-latest-comments__comment-link:hover {
+	color: var(--adas-personal-portfolio-primary) !important;
+}
+/* Blog Single */
+.adas-personal-portfolio-blog-single {
+	padding: 30px 0 80px;
+}
+.blog-content-main {
+	margin-top: 50px;
+}
+.adas-personal-portfolio-blog-single ul li {
+  line-height: 30px;
+}
+.adas-personal-portfolio-blog-single .blog-body h1 {
+	font-size: 36px;
+}
+.blog-content-header .blog-meta ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 15px;
+	margin: 0;
+}
+.blog-content-header .blog-meta {
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+.blog-content-header .blog-meta ul li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.blog-content-header .blog-meta ul li i {
+	margin-right: 5px;
+	color: var(--adas-personal-portfolio-primary);
+}
+.blog-content-header .blog-meta ul li, .blog-content-header .blog-meta ul li a {
+	color: var(--adas-personal-portfolio-text);
+	font-weight: 400;
+}
+.blog-content-header .blog-meta ul li:hover,
+.blog-content-header .blog-meta ul li:focus,
+.blog-content-header .blog-meta ul li a:hover,
+.blog-content-header .blog-meta ul li a:focus{
+	color: var(--adas-personal-portfolio-primary) !important;
+}
+
+.adas-personal-portfolio-blog-single .blog-body h1 a:hover,
+.adas-personal-portfolio-blog-single .blog-body h1 a:focus{
+	color:var(--adas-personal-portfolio-primary) !important;
+}
+.adas-personal-portfolio-blog-single .blog-body p,.adas-single-page-content p {
+	margin-bottom: 20px;
+}
+.adas-personal-portfolio-blog-single .blog-body p:last-child,
+.adas-single-page-content p:last-child {
+	margin: 0;
+}
+.adas-personal-portfolio-blog-single .blog-body p a:hover,
+.adas-personal-portfolio-blog-single .blog-body p a:focus{
+	color:var(--adas-personal-portfolio-primary) !important;
+}
+.wp-block-quote {
+	background-color: var(--adas-personal-portfolio-white);
+	padding: 30px 40px;
+	margin-bottom: 20px;
+	font-weight: 600;
+	position: relative;
+	box-shadow: 0 0px 5px rgba(0, 0, 0, 0.14);
+	color: var(--adas-personal-portfolio-primary);
+}
+.wp-block-quote p {
+	color: var(--adas-personal-portfolio-heading);
+	font-size: 18px;
+	font-weight: 500;
+	margin: 0 !important;
+}
+.wp-block-quote cite, .wp-block-quote footer {
+	font-size: 16px;
+	margin-top: 20px !important;
+	color: currentColor !important;
+	display: block !important;
+}
+.wp-block-quote em a {
+	color: var(--adas-personal-portfolio-primary);
+}
+#comments {
+	margin-top: 30px;
+}
+#comments .comments-title {
+	font-size: 20px;
+}
+/* Comment List */
+.comment-list {
+	margin-top: 30px;
+	position: relative;
+	background-color: var(--adas-personal-portfolio-white);
+	list-style: none;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding: 30px;
+ 	border-radius: 8px;
+}
+.comment-author.vcard img {
+	width: 70px;
+	height: 70px;
+	line-height: 80px;
+	padding: 2px;
+	position: absolute;
+	left: 0;
+	border-radius: 8px;
+}
+.comment-author.vcard {
+	display: inline-block;
+}
+.comment-meta a {
+	
+}
+.comment-meta {
+	margin-bottom: 5px;
+	position: relative;
+	padding-left: 90px;
+}
+.comment-author.vcard .fn {
+	margin: 0 0 5px;
+	font-size: 16px;
+	text-align: left;
+	
+}
+#comment-7 {
+	padding-top: 20px;
+	margin: 0 0 20px;
+}
+.comment-reply-link {
+	background: var(--adas-personal-portfolio-primary);
+	color: #fff;
+	padding: 2px 10px;
+	display: inline-block;
+	border-radius: 50px;
+	font-size: 13px;
+	text-decoration: none !important;
+}
+.comment-reply-link:hover, .comment-reply-link:focus {
+	background: #222534;
+	color: #fff !important;
+}
+.comment-list li.comment {
+	display: ;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ebebeb;
+}
+.comment-list ol.children {
+	padding-top: 30px;
+	margin-top: 30px;
+	border-top: 1px solid #ebebeb;
+	list-style: none;
+	padding: ;
+	margin-left: 50px;
+}
+.comment-list ol.children ol.children {
+	display: ;
+	margin-left: 15px;
+}
+.comment-list li.comment:last-child {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.comment-list .comment-body  .comment-content {
+	padding-left: 90px;
+}
+.comment-list .reply {
+	padding-left: 90px;
+	margin-top: 10px;
+}
+#respond .comment-reply-title {
+	font-size: 20px;
+}
+.comment-respond p {
+	margin-bottom: 20px;
+}
+.comment-respond p:last-child {
+	margin: 0;
+}
+
+.comment-respond p {
+  margin-bottom: 20px;
+}
+.comment-respond p a{
+	color:var(--adas-personal-portfolio-heading);
+}
+.comment-respond p a:hover{
+	color:var(--adas-personal-portfolio-primary);
+}
+#wp-comment-cookies-consent {
+	width: auto;
+	display: inline-block;
+	height: auto;
+	line-height: initial;
+	margin: 0;
+	height: initial;
+	min-height: initial;
+}
+.comment-respond label {
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.comment-respond input, .comment-respond textarea {
+	width: 100%;
+	padding-left: 10px;
+	border-radius: 5px;
+	border-radius: 0px;
+	background: transparent;
+	border: 1px solid var(--adas-personal-portfolio-border);
+	-webkit-box-shadow: inset 0px 1px 2px 0px rgba(238,238,238,1);
+	-moz-box-shadow: inset 0px 1px 2px 0px rgba(238,238,238,1);
+	box-shadow: none;
+	border: 1px solid var(--adas-personal-portfolio-border);
+	font-weight: 500;
+}
+.comment-respond input:hover,
+.comment-respond input:focus, 
+.comment-respond textarea:hover,
+.comment-respond textarea:focus{
+	border-color:var(--adas-personal-portfolio-primary) !important;
+}
+.comment-respond input, input {
+	min-height: 42px;
+	font-size: 14px;
+}
+.comment-respond .form-submit {
+	display: inline-block;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.comment-respond #submit {
+	padding: 16px 30px;
+	background: var(--adas-personal-portfolio-heading);
+	display: inline-block;
+	color: #fff;
+	float: left;
+	border: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	height: auto;
+	cursor: pointer;
+	box-shadow: none;
+}
+.comment-respond #submit:hover,
+.comment-respond #submit:focus{
+	background:var(--adas-personal-portfolio-primary);
+}
+/* Blog Comment Form */
+.comment-respond {
+	margin-top: 50px;
+	padding: 0;
+	position: relative;
+	background-color: var(--adas-personal-portfolio-white);
+	border-radius: 8px;
+}
+.comment-form .form-group label span, 
+.comment-form .comment-message label span {
+	color: var(--adas-personal-portfolio-primary);
+}
+.comment-form .comment-form-wrap {
+	margin-top: 20px;
+}
+.comment-form .form-group, 
+.comment-form .comment-message {
+	position: relative;
+	display: block;
+	margin: 0 0 25px;
+}
+.comment-form .form-group input:hover,
+.comment-form .form-group input:focus,
+.comment-form .comment-message textarea:hover{
+	outline:none;
+	background:#fff;
+}
+.comment-form .comment-message input,
+.comment-form .comment-message textarea{
+	border-bottom:1px solid transparent;
+}
+.comment-form .form-group input:hover,
+.comment-form .comment-message textarea:hover{
+	border-bottom-color:#379CB0;
+}
+
+/* Comment Form Reply */
+.comment-list .bottom-title h2.comments-heading {
+	background: transparent !important;
+	
+	padding: 0;
+	left: auto;
+}
+.comment-list .bottom-title h2.comments-heading:before {
+	display: none;
+}
+.comment-list .bottom-title h2.comments-heading a{
+	color:#379CB0;
+}
+.comment-list .comment-respond {
+	background: #f9f9f9;
+}
+
+.blog-main-layout {
+	padding: 0;
+}
+.post-cat {
+	position: absolute;
+	top: 17px;
+	left: -43px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	overflow: hidden;
+	z-index: 333;
+	background-color: var(--adas-personal-portfolio-white);
+	display: inline-block;
+	padding: 7px 22px;
+	color:var(--adas-personal-portfolio-primary);
+	font-weight: 600;
+	font-size: 14px;
+	left: -30px;
+}
+.post-cat a {
+	color:var(--adas-personal-portfolio-primary);
+	font-weight: 400;
+}
+.site-main.search {
+	padding: 100px 0;
+}
+.adas-personal-portfolio-blog-single-news .post-thumb {
+  float: ;
+  position: absolute;
+  left: 0;
+}
+.post-text {
+  padding-left: 113px;
+}
+.adas-personal-portfolio-blog-single-news {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.post-date {
+	font-size: 13px;
+	display: block;
+	color: #666;
+	margin-top: 2px;
+}
+.post-date i {
+  margin-right: 5px;
+}
+/*Archive Posts */
+.adas-personal-portfolio-blog-section {
+	padding: 20px 0 50px;
+}
+
+.adas-personal-portfolio-main-area__sidebar {
+	
+}
+.adas-personal-portfolio-sidebar {
+	border-radius: 8px;
+	margin-top: 50px;
+}
+.adas-personal-portfolio-post-content {
+	margin-top: 20px;
+}
+@media only screen and (max-width: 991px) {
+	.adas-personal-portfolio-main-area__with-side,.adas-personal-portfolio-main-area__sidebar {
+		width: 100%;
+	}
+}
+
+.adas-personal-portfolio-sidebar__single {
+	padding-left: 30px;
+}
+.blog-content-main .blog-head {
+	margin-bottom: 30px;
+}
+.adas-personal-portfolio-blog-single p {
+	margin-bottom: 20px;
+	color: var(--adas-personal-portfolio-text);
+}
+
+.list-style-modern {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 15px;
+  }
+  .list-style-modern li:before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background: #ef644c;
+	display: inline-block;
+	border-radius: 100%;
+	margin-right: 10px;
+  }
+/*---------------------------------------
+# End Blog CSS
+-----------------------------------------*/
+
+/*---------------------------------------
+# Pages CSS
+-----------------------------------------*/
+.adas-personal-portfolio-page {
+	padding: 80px 0;
+}
+.adas-personal-portfolio-search-page {
+	padding: 50px 0 80px;
+}
+.site-page .page-top {
+	margin-top: 30px;
+}
+/* No resutls Page */
+.no-results.not-found {
+  margin-top: 30px;
+}
+.no-results.not-found .page-title {
+  margin: 0 0 15px;
+}
+.no-results.not-found .page-title span {
+ color:var(--adas-personal-portfolio-primary);
+  margin-right: 10px;
+}
+.no-results.not-found {
+}
+.no-results.not-found .page-content {
+  margin: 0;
+}
+.no-results.not-found  .search-form {
+  margin-top: 15px;
+}
+.search-results article.page .entry-content, 
+.search-results article.page .blog-meta {
+	display: none;
+}
+
+/* 404 Page CSS */
+.adas-personal-portfolio-404 {
+	padding: 100px 0;
+}
+.adas-personal-portfolio-404__content {
+	padding: 50px;
+	display: flex;
+	gap: 25px;
+	flex-direction: column;
+	border: 10px solid var(--adas-personal-portfolio-border);
+}
+.adas-personal-portfolio-404__title {
+	margin: 0;
+	font-weight: 600;
+}
+.adas-personal-portfolio-404__inside {
+	font-size: 40px;
+}
+.adas-personal-portfolio-404__title span {
+	color: var(--adas-personal-portfolio-primary);
+	font-size: 80px;
+	display: block;
+}
+.adas-personal-portfolio-404__text {
+	margin-top: 20px;
+	font-size: 16px;
+	color: var(--adas-personal-portfolio-text);
+}
+.adas-personal-portfolio-404__button{
+	margin-top:25px;
+}
+.adas-personal-portfolio-404__label {
+	display: flex !important;
+	gap: 10px;
+	flex-direction: column;
+}
+
+.adas-personal-portfolio-page.site-page:not(.container-elementor) .adas-single-page-content {
+  background-color: var(--adas-personal-portfolio-white);
+  padding: 40px 40px;
+  border-radius: 8px;
+}
+
+/*---------------------------------------
+# End Pages CSS
+-----------------------------------------*/
+
+/*---------------------------------------
+# Pagination CSS
+-----------------------------------------*/
+.pagination-main {
+	margin: 50px 0 0;
+	text-align: left;
+}
+.pagination {
+	display: block;
+	padding-left: 0;
+	border-radius: 0px;
+	margin: 0;
+	justify-content: center;
+	text-align: center;
+}
+.pagination li {
+	display: inline-block;
+	margin-right: 10px;
+}
+.pagination li:last-child{
+	margin:0;
+}
+.pagination li a {
+	display: block;
+	width: 46px;
+	height: 46px;
+	line-height: 46px;
+	text-align: center;
+	position: relative;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	border-radius: 100%;
+	text-decoration: none;
+	border: 1px solid #ccccccc9;
+	border-radius: 0;
+	border-radius: 100%;
+	color: var(--adas-personal-portfolio-heading);
+	border-radius: 0px;
+}
+.pagination li.active a,
+.pagination li:hover a {
+	-webkit-box-shadow: 0px 10px 15px rgba(88, 85, 85, 0.15);
+	-moz-box-shadow: 0px 10px 15px rgba(88, 85, 85, 0.15);
+	box-shadow: 0px 10px 15px rgba(88, 85, 85, 0.15);
+}
+.pagination li.active a, .pagination li a:hover, .pagination li a:focus {
+	color: #fff !important;
+	background: var(--adas-personal-portfolio-primary) !important;
+	border-color: transparent;
+}
+.pagination li a span,
+.pagination li a i {
+	position: relative;
+	z-index: 40;
+}
+.pagination li a i {
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+.pagination li.prev:hover a i, 
+.pagination li.next:hover a i {
+	color:var(--adas-personal-portfolio-primary);
+}
+.pagination li a::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity:0;
+	visibility:hidden;
+	-webkit-transition:all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	transition:all 0.3s ease;
+}
+.pagination li.active a::before,
+.pagination li:hover a::before{
+	opacity:1;
+	visibility:visible;
+}
+.pagination li.prev a:hover,
+.pagination li.prev a:focus,
+.pagination li.next a:hover,
+.pagination li.next a:focus{
+	box-shadow:none;
+	color:var(--adas-personal-portfolio-primary) !important;
+}
+.pagination li.prev a, .pagination li.next a {
+	display: ;
+	width: auto;
+	height: auto;
+	background: transparent !important;
+	font-size: 20px;
+	border: none !important;
+	outline: none;
+	font-size: 16px;
+}
+/*---------------------------------------
+# End Pagination CSS
+-----------------------------------------*/
+
+/*---------------------------------------
+# WordPress Default CSS
+-----------------------------------------*/
+.adas-personal-portfolio-main-area {
+	padding: 30px 0 80px;
+}
+.widget .widget-title, .widget_block .wp-block-heading, .widgettitle {
+	font-size: 22px;
+	font-weight: 600;
+	position: relative;
+	margin-bottom: 22px;
+	text-transform: capitalize;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	border-bottom: 1px solid #00000024;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.widget ul, .widget ul li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.widget ul li{
+	margin-bottom:15px;
+}
+.widget ul li:last-child{
+	margin:0;
+}
+.widget ul ul ul {
+	padding-left: 5px;
+}
+.widget ul, .widget ul li a {
+	text-decoration: none;
+	color: var(--adas-personal-portfolio-heading);
+}
+.widget ul li a:hover,.widget ul li a:focus{
+	color:var(--adas-personal-portfolio-primary) !important;
+}
+.page-links {
+	padding: 0 20px;
+}
+.page-links a {
+	background: var(--adas-personal-portfolio-primary);
+	color: #fff;
+	padding: 5px 10px;
+}
+
+.widget select {
+	width: 100%;
+	height: 45px;
+	padding: 0 20px;
+	background: #F6F9FC;
+}
+/* Post Password Form */
+.post-password-form input[type="password"] {
+	width: 100%;
+	border: 1px solid #ebebeb;
+	border-radius: 0px;
+	height: 50px;
+	padding: 0 10px;
+}
+.post-password-form input[type="submit"] {
+	background: var(--adas-personal-portfolio-primary);
+	color: #fff;
+	height: 50px;
+	border: none;
+	border-radius: 0px;
+	cursor: pointer;
+	padding-right: 20px;
+	padding-left: 20px;
+	font-size: 14px;
+}
+.post-password-form input[type="submit"]:hover,
+.post-password-form input[type="submit"]:focus{
+	background:var(--adas-personal-portfolio-heading);
+}
+.post-password-form {
+	position: relative;
+}
+/* Table CSS */
+table th {
+}
+table thead th {
+	background: var(--adas-personal-portfolio-primary);
+	padding: 12px 30px;
+	color: #fff;
+	font-size: 18px;
+}
+table tbody th,table tbody td {
+	border: 1px solid #ebebeb;
+	padding: 12px 30px;
+	text-align: ight;
+}
+table tbody a {
+	color:var(--adas-personal-portfolio-primary);
+}
+table tbody a:hover {
+	
+}
+/* Widget Select */
+.single-widget select {
+	width: 100%;
+	padding: 12px;
+	font-size: 14px;
+	border: 1px solid #ebebeb;
+	background: #F5F8F9;
+	position: relative;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-user-select: none;
+	background-image: url(/images/select-arrow.png) !important;
+	background-repeat: no-repeat !important;
+	background-position: right 50% !important;
+}
+/* Widget Tags CSS */
+.widget_tag_cloud .tagcloud a {
+	color: #555;
+	font-size: 14px !important;
+	display: inline-block;
+	padding: 5px 15px;
+	background-color: var(--adas-personal-portfolio-white);
+	margin-top: 5px;
+}
+.widget_tag_cloud .tagcloud a:hover{
+	background:var(--adas-personal-portfolio-primary);
+	color:#fff;
+}
+
+/* Widget RSS CSS */
+.widget_rss .rsswidget {
+  display: inline-block;
+}
+.widget_rss ul li a {
+  line-height: ;
+}
+.widget_rss ul li a {
+}
+.widget_rss ul li .rsswidget {
+  line-height: 20px;
+}
+.widget_rss .rss-date {
+ color:var(--adas-personal-portfolio-primary);
+  display: block;
+  line-height: initial;
+}
+.widget_rss .rssSummary {
+  display: ;
+  line-height: 25px;
+}
+
+/* Widget Search CSS */
+.search-form{
+	position:relative;
+	display:flex;
+	flex-direction:column;
+}
+.search-form input[type="search"], .wp-block-search .wp-block-search__input {
+	width: 100%;
+	height: 50px;
+	border-radius: 0px;
+	padding: 0 20px 0 20px;
+	font-size: 14px;
+	background: transparent;
+	border: none;
+	border-radius: 3px;
+	border: 1px solid var(--adas-personal-portfolio-border);
+	border-radius: 4px;
+}
+.search-form input[type="search"]:hover, .search-form input[type="search"]:focus, .wp-block-search .wp-block-search__input:hover, .wp-block-search .wp-block-search__input:focus {
+	border-color: var(--adas-personal-portfolio-primary) !important;
+}
+.search-form label {
+  width: 100%;
+  position:relative;
+}
+.search-form input[type="submit"], .wp-block-search .wp-block-search__button {
+	background: var(--adas-personal-portfolio-primary);
+	color: #fff;
+	height: 50px;
+	border: none;
+	border-radius: 4px;
+	padding: 0 20px;
+	cursor: pointer;
+	margin-top: 10px;
+	margin: 0 !important;
+}
+.search-form input[type="submit"]:hover, .search-form input[type="submit"]:focus, .wp-block-search .wp-block-search__button:hover, .wp-block-search .wp-block-search__button:focus {
+	background: var(--adas-personal-portfolio-darkbg);
+}
+.search-form input[type="submit"]{
+	margin-top:15px !important;
+}
+.search-form-main .search-form input[type="search"]:hover,
+.search-form-main .search-form input[type="search"]:focus,
+.wp-block-search .wp-block-search__input:hover,
+.wp-block-search .wp-block-search__input:focus{
+border-color: var(--adas-personal-portfolio-primary) !important;
+}
+
+/* Widget Calender CSS */
+#calendar_wrap th,
+#calendar_wrap td {
+	padding: 5px 10px;
+	text-align: center;
+	display: nherit;
+	border: 1px solid #ebebeb;
+	
+	background:#fff;
+}
+#calendar_wrap #wp-calendar {
+	max-width: 100%;
+}
+#calendar_wrap #wp-calendar thead th, 
+#calendar_wrap #wp-calendar tfoot td {
+	background: #F5F8F9;
+	
+	font-size: 15px;
+}
+#calendar_wrap #wp-calendar caption {
+	caption-side: top;
+	background: var(--adas-personal-portfolio-primary);
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	font-size: 15px;
+}
+#calendar_wrap #wp-calendar tbody tr a {
+	color: #fff;
+	border-radius: 100%;
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	padding: 0;
+	background: var(--adas-personal-portfolio-primary);
+	padding: 0;
+	text-align: center;
+}
+#calendar_wrap #wp-calendar tfoot td {
+	display: ;
+	background-color: var(--adas-personal-portfolio-white);
+}
+#calendar_wrap #wp-calendar tfoot tr a {
+	
+}
+#calendar_wrap #wp-calendar tfoot tr a:hover{
+	color:var(--adas-personal-portfolio-primary);
+}
+/* Widget Search CSS */
+.search-form {
+  width: 100%;
+}
+.search-form label input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 0px;
+}
+.search-form  .search-submit {
+  display: block;
+  background: var(--adas-personal-portfolio-primary);
+  border-radius: 0px;
+  padding: 12px 20px;
+  border: none;
+  color: #fff;
+  position: ;
+  display: inline-block;
+  height: 48px;
+}
+.search-form label {
+  display: inline-block;
+}
+/* Widget Recent Comments */
+.widget_recent_comments li a {
+    display: block;
+}
+.widget_recent_comments .recentcomments a {
+    display: block !important;
+    line-height: initial;
+}
+.widget_recent_comments li {
+    line-height: 30px !important;
+    margin-bottom: 10px !important;
+}
+.widget_recent_comments li span {
+    position: relative;
+}
+.widget_recent_comments li span::before {
+	left: 0;
+	top: 0;
+	font-family: 'FontAwesome';
+	margin-right: 5px;
+	line-height: initial;
+	content: "\f007";
+}
+.recentcomments span {
+	display: inline-block !important;
+}
+.widget_categories li {
+	text-align: right;
+	overflow: hidden;
+}
+.widget_categories li a {
+  text-align: left;
+  float: left;
+}
+.mc4wp-form-fields label {
+	width: 100%;
+	display: block;
+	font-size:0px;
+}
+.mc4wp-form-fields input {
+	width: 100%;
+	padding: 15px;
+	border-radius: 0px;
+	font-size: 14px;
+}
+.mc4wp-form-fields input[type="submit"] {
+	border: none;
+	background: var(--adas-personal-portfolio-primary);
+	color: #fff;
+	border: none;
+	border-radius: 0px;
+	margin-top: 10px;
+}
+.mc4wp-form-fields input[type="submit"]:hover{
+	background:var(--adas-personal-portfolio-primary);
+	color:#fff;
+}
+
+/* WP Blocks */
+
+.wp-block-archives li,.wp-block-archives li a {
+  line-height: 30px;
+}
+.wp-block-calendar tfoot td {
+  text-align: left;
+}
+.wp-block-calendar tfoot td a {
+ color:var(--adas-personal-portfolio-primary);
+  border: none;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  padding: ;
+}
+.wp-block-calendar table caption {
+  caption-side: initial;
+  color: #fff;
+  font-weight: 600;
+  background: var(--adas-personal-portfolio-primary);
+  padding: 10px 20px;
+}
+.wp-block-calendar table th {
+  background: #F5F8F9;
+  
+  font-weight: 600;
+}
+.wp-block-calendar table th {
+}
+.wp-block-categories select {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  background: #F5F5F5;
+}
+.wp-block-categories {
+  margin-bottom: 20px;
+}
+.wp-block-archives.wp-block-archives-dropdown {
+}
+.wp-block-archives select {
+  display: ;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  background: #F5F5F5;
+}
+.wp-block-latest-comments li a {
+	
+	text-decoration: none;
+}
+.wp-block-latest-posts a {
+  
+}
+.wp-block-latest-posts__post-title {
+	font-size: 15px;
+	line-height: 22px !important;
+	display: block;
+	text-decoration: none !important;
+}
+.wp-block-latest-posts__post-date::before {
+	content: "\f073";
+	font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+	color: var(--adas-personal-portfolio-primary);
+	margin-right: 5px;
+}
+.wp-block-search input {
+	padding: 12px 20px;
+	border-radius: 0px;
+}
+.wp-block-search button {
+  background: var(--adas-personal-portfolio-primary);
+  color: #fff;
+  border-radius: 0px;
+}
+.wp-block-search {
+  margin-bottom: 20px;
+}
+.wp-block-tag-cloud a {
+	padding: 5px 10px;
+	font-size: 14px !important;
+	color: var(--adas-personal-portfolio-text);
+	border: 1px solid var(--adas-personal-portfolio-border);
+	margin-top: 5px;
+	border-radius: 4px;
+	text-decoration: none !important;
+}
+.wp-block-tag-cloud a:hover,.wp-block-tag-cloud a:focus {
+ color:#fff !important;
+ border-color:transparent;
+ background-color: var(--adas-personal-portfolio-primary);;
+}
+.wp-block-rss li a {
+  color: #555;
+}
+
+.wp-block-latest-comments__comment-date {
+	font-size: 13px;
+	margin-top: 6px;
+}
+.wp-block-latest-posts__featured-image img {
+	width: auto !important;
+	height: auto !important;
+	border-radius: 5px;
+}
+.wp-block-latest-posts__featured-image {
+	position: absolute !important;
+	left: 0;
+	min-width: 70px;
+	max-width: 70px;
+	top: 50%;
+	margin-top: -35px;
+}
+.wp-block-latest-posts.wp-block-latest-posts__list li {
+	clear: both;
+	padding-left: 84px;
+}
+.wp-block-latest-posts li {
+	position: relative;
+}
+.wp-block-search__inside-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+/*---------------------------------------
+# End WordPress Default CSS
+-----------------------------------------*/
+
+/*---------------------------------------
+# Footer CSS
+-----------------------------------------*/
+.adas-personal-portfolio-footer__widget{
+	margin-top:30px;
+}
+.adas-personal-portfolio-footer__bottom {
+	padding: 20px 0;
+	text-align: center;
+	position: relative;
+	background: #ef644c1c !important;
+}
+.adas-personal-portfolio-footer__branding {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 15px;
+	color: #fff;
+}
+.adas-personal-portfolio-footer__branding .adas-personal-portfolio-footer__devs, .adas-personal-portfolio-footer__branding .adas-personal-portfolio-footer__devs a {
+	font-size: 16px;
+}
+/*---------------------------------------
+# End Footer CSS
+-----------------------------------------*/
+
+/* Tablet Layout 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.header .main-navigation ul {
+	padding-right: 0;
+}
+.header .main-navigation ul li {
+	margin-right: 2px;
+}
+.header .main-navigation ul li a {
+	padding: 18px 5px;
+	font-size: 14px;
+}
+.adas-hero-area__title {
+	font-size: 40px;
+	color: #fff;
+	margin-bottom: 20px;
+	font-weight: 800;
+}
+.adas-brands__logos {
+	flex-wrap: wrap;
+}
+}
+@media only screen and (max-width: 767px) {
+.main-menu {
+	padding: 15px 0;
+}
+.header .social-widget {
+	top: 3px;
+}
+#calendar_wrap {
+	overflow: scroll;
+}
+.scroll-top {
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+	top: -22px;
+	right: 30px;
+	font-size: 20px;
+}
+.adas-personal-portfolio-footer__branding {
+	justify-content: center;
+	flex-direction: column;
+}
+}
+
+@media only screen and  (max-width: 767px) {
+.adas-personal-portfolio-404__content {
+	padding: 30px;
+}
+.adas-personal-portfolio-404__title span {
+	font-size: 60px;
+}
+.adas-personal-portfolio-404__title {
+	font-size: 30px;
+}
+.search-form-main {
+	padding: 25px;
+}
+.blog-heading{
+	font-size: 28px;
+}
+.adas-personal-portfolio-blog-single {
+	padding-top: 0;
+}
+.blog-content-main{
+	padding: 30px 20px;
+}
+}
+
+@media only screen and  (max-width: 360px) {
+.adas-personal-portfolio-404__title,.adas-personal-portfolio-404__inside {
+	font-size: 28px;
+}
+}
+
+@media only screen and  (max-width: 1000px) {
+.adas-personal-portfolio-main-area__content {
+	order: -1;
+}
+}
+.oe-menu-title {
+	font-size: 18px;
+	color: #fff;
+	font-weight: 700;
+	margin-bottom: 15px !important;
+	display: block;
+}
+.adas-personal-portfolio-mobile-menu .menu-inner ul li ul li {
+	border: none;
+  }
+  .adas-personal-portfolio-mobile-menu .menu-inner ul li ul {
+	border-left: 1px solid #cccccc47;
+	margin-left: 15px;
+}
+  .adas-personal-portfolio-mobile-menu{
+	  display:block;
+  }
+  .adas-personal-portfolio-mobile-menu .menu-click {
+	  top: 0;
+	  left: 0;
+	  font-size: 30px;
+  }
+  .adas-personal-portfolio-mobile-menu .menu-click a {
+	  color: #fff;
+	  z-index: 3333;
+	  position: relative;
+	  font-size: 22px;
+  }
+  .adas-personal-portfolio-mobile-menu .menu-click a:hover, 
+  .adas-personal-portfolio-mobile-menu .menu-click a:focus {
+	  color:var(--adas-personal-portfolio-primary);
+  }
+  .adas-personal-portfolio-mobile-menu .menu-click a span{
+	  padding-left:5px;
+  }
+  .adas-personal-portfolio-mobile-menu .menu-inner {
+	position: fixed;
+	padding: 0;
+	padding-top: 22px;
+	padding-bottom: 20px;
+	right: 0;
+	background: var(--adas-personal-portfolio-darkbg2);
+	top: 85px;
+	min-width: 300px;
+	padding: 30px 20px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(20px);
+	transition: all 0.3s ease;
+	padding-bottom: 20px;
+	z-index: 3333333;
+	overflow: scroll;
+	right: 0;
+	padding-bottom: 20px;
+	width: 20%;
+	top: 0;
+	height: 100%;
+}
+  .adas-personal-portfolio-mobile-menu .menu-inner.active {
+	  opacity:1;
+	  visibility:visible;
+	  transform: translateY(0px);
+  }
+  .adas-personal-portfolio-mobile-menu .menu-inner ul li {
+	  display: block;
+	  float: none;
+	  width: 100%;
+	  border-bottom: 1px solid #cccccc47;
+  }
+  .adas-personal-portfolio-mobile-menu .menu-inner ul li:last-child{
+	  border:none;
+  }
+  .adas-personal-portfolio-mobile-menu .menu-inner ul li a {
+	/* padding: 0; */
+	display: block;
+	width: 100%;
+	padding: 10px 0px;
+	color: #eee !important;
+	text-decoration: none;
+	border: 1px solid transparent;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.adas-personal-portfolio-mobile-menu .menu-inner ul li a i {
+	background: var(--adas-personal-portfolio-darkbg) !important;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	color: #fff;
+}
+.adas-personal-portfolio-mobile-menu .menu-inner ul li ul {
+	padding-left: 20px;
+}
+.adas-personal-portfolio-mobile-menu .menu-inner ul li a:hover,
+.adas-personal-portfolio-mobile-menu .menu-inner ul li a:focus {
+	color: var(--adas-personal-portfolio-primary) !important;
+}
+.adas-personal-portfolio-mobile-menu .menu-inner ul {
+	display: block;
+	padding: 0;
+	margin: 0;
+	margin-top: 15px;
+}
+  .adas-personal-portfolio-mobile-menu .main-navigation ul li ul {
+	position: relative;
+	opacity: 1;
+	visibility: visible;
+	margin-left: 20px;
+  }
+  .header .adas-personal-portfolio-mobile-menu ul li ul {
+	  position: relative;
+	  opacity: 1;
+	  visibility: visible;
+	  width: 100%;
+	  margin-left: 30px;
+  }
+  .adas-personal-portfolio-mobile-menu .close-menu{
+	  margin-top:20px;
+  }
+  .adas-personal-portfolio-mobile-menu .close-menu a {
+	display: inline-block;
+	/* border: 1px solid #ccc; */
+	background: var(--adas-personal-portfolio-primary);
+	color: #fff;
+	padding: 10px 25px;
+	/* border: none; */
+	border: 1px solid transparent;
+}
+.adas-personal-portfolio-mobile-menu .close-menu a:hover, .adas-personal-portfolio-mobile-menu .close-menu a:focus {
+	background: var(--adas-personal-portfolio-darkbg);
+	color: var(--adas-personal-portfolio-primary);
+}
+  
+.adas-personal-portfolio-mobile-menu .close-menu a i {
+	margin-right: 5px;
+}
+
+.block-form-contact .form-group {
+	margin-bottom: 15px;
+}
+.xa-blog-single__title a {
+	color: var(--xa-secondary);
+}
